@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RxJava Sign Up Screen</string>
+    <string name="sign_up_for_an_account">Sign up for an account</string>
+    <string name="email_address">Email address</string>
+    <string name="create_your_password">Create your password</string>
+    <string name="sign_up">Sign Up</string>
+</resources>

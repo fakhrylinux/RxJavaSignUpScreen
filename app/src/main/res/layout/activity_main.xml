@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/sign_up_for_an_account"
+        android:textColor="#D81B60"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailError"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/passwordError"
+        app:layout_constraintTop_toBottomOf="@+id/signUp"
+        app:layout_constraintVertical_bias="0.100000024"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:layout_editor_absoluteX="0dp">
+
+        <EditText
+            android:id="@+id/enterEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/email_address"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordError"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSignUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailError"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/enterPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/create_your_password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0000FF"
+        android:enabled="false"
+        android:text="@string/sign_up"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
